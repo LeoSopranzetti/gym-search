@@ -6,6 +6,34 @@
 //@import '~bootstrap/dist/css/bootstrap.min.css';
 @import 'custom/custom.scss';
 
+@font-face {
+    font-family: 'gotham-black';
+    src: url('/assets/fonts/gotham-black.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham-bold';
+    src: url('/assets/fonts/gotham-bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham-book';
+    src: url('/assets/fonts/gotham-book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham-light';
+    src: url('/assets/fonts/gotham-book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 html, body { height: 100%; }
-body {width: 100vw; max-width: 100vw; margin: 0; font-family: 'Saira', Roboto, "Helvetica Neue", sans-serif; overflow-x: hidden;}
+body {width: 100vw; max-width: 100vw; margin: 0; font-family: 'gotham-book', Roboto, "Helvetica Neue", sans-serif; overflow-x: hidden;}
