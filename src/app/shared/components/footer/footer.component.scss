@@ -1,0 +1,16 @@
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorDarkGrey);
+    height: 180px;
+    width: 100vw;
+    flex-direction: column;
+    p{
+        color: #ffffff;
+    }
+    img{
+        width: 100px;
+        margin-bottom: 15px;
+    }
+}
