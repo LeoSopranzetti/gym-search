@@ -8,21 +8,84 @@
     .content{
         max-width: 1000px;
         width: 1000px;
-        .title{
-            font-size: 40px;
-            font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
-            color: var(--colorDarkGrey);
-            margin-bottom: 5px;
+        .header{
+            margin-bottom: 35px;
+            .title{
+                font-size: 40px;
+                font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
+                color: var(--colorDarkGrey);
+                margin-bottom: 5px;
+            }
+            .line {
+                border-bottom: 10px solid var(--colorDarkGrey); 
+                margin-top: 25px;
+                width: 100px;
+            }
+            .description{
+                margin-top: 30px;
+                line-height: 1.5;
+                font-size: 17px;
+            }
         }
-        .line {
-            border-bottom: 10px solid var(--colorDarkGrey); 
-            margin-top: 25px;
-            width: 100px;
+
+        .select-time-box{
+            padding: 20px; /* 5px de cada lado */
+            border-radius: 5px;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); 
+            border: 2px solid #e0e0e0 ;
+            background-color: #fff;
+
+            .header-select-time{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 25px;
+                img{
+                    width: 20px;
+                }
+                p{
+                    margin-left: 5px;
+                    color: var(--colorLightGrey);
+                    font-family: 'gotham-light', Roboto, "Helvetica Neue", sans-serif;
+                }
+            }
+
+            .title{
+                color: var(--colorLightGrey);
+                font-size: 20px;
+                padding-bottom: 15px;
+                border-bottom: 3px solid #f0f0f0;
+                margin-bottom: 10px;
+                font-family: 'gotham-light', Roboto, "Helvetica Neue", sans-serif;
+            }
+
+            .radio-section{
+                margin-bottom: 30px;
+                .radio-group{
+                    display: flex;
+                    flex-direction: column;
+    
+                    .radio-button{
+                        border-bottom: 3px solid #f0f0f0;
+                        .radio-description{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            p{
+                                color: var(--colorLightGrey);
+                                font-family: 'gotham-light', Roboto, "Helvetica Neue", sans-serif;
+                            }
+                            
+                        }
+                    }
+
+                }
+            }
         }
-        .description{
-            margin-top: 30px;
-            line-height: 1.5;
-            font-size: 17px;
-        }
+
+
+        
+
+
     }
 }

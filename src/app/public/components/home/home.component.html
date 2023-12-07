@@ -1,9 +1,58 @@
 <div class="body-container">
   <div class="content">
-    <p class="title">REABERTURA</p>
-    <p class="title">SMART FIT</p>
-    <p class="line"></p>
-    <p class="description">O horário de funcionamento das nossas unidades está seguindo os decretos de cada município. Por isso, confira aqui se a sua unidade está aberta e as medidas de segurança que estamos seguindo.</p>
-  </div>
 
+    <div class="header">
+      <p class="title">REABERTURA</p>
+      <p class="title">SMART FIT</p>
+      <p class="line"></p>
+      <p class="description">O horário de funcionamento das nossas unidades está seguindo os decretos de cada município. Por isso, confira aqui se a sua unidade está aberta e as medidas de segurança que estamos seguindo.</p>
+    </div>
+
+    <div class="select-time-box">
+      <div class="header-select-time">
+        <img src="../../../../assets/images/icon-hour.png" alt="">
+        <p>Horário</p>
+      </div>
+
+      <p class="title">Qual período quer treinar?</p>
+      
+      <section class="radio-section">
+        <form [formGroup]="myForm">
+
+          <mat-radio-group class="radio-group" aria-label="Select an option" formControlName="selectedOption">
+
+              <mat-radio-button class="radio-button" value="1">
+                <div class="radio-description">
+                  <p>Manhã</p>
+                  <p>06:00 às 12:00</p>
+                </div>
+              </mat-radio-button>
+
+            <mat-radio-button class="radio-button" value="2">
+              <div class="radio-description">
+                <p>Tarde</p>
+                <p>12:01 às 18:00</p>
+              </div>
+            </mat-radio-button>
+
+            <mat-radio-button class="radio-button" value="3">
+              <div class="radio-description">
+                <p>Noite</p>  
+                <p>18:01 às 23:00</p>  
+              </div>
+            </mat-radio-button>
+
+          </mat-radio-group>
+
+        </form>
+
+
+      </section>
+
+    </div>
+
+
+
+
+  </div>
 </div>
