@@ -12,10 +12,13 @@ export class HomeComponent implements OnInit {
   morning: boolean = false;
   afternoon: boolean = false;
   night: boolean = false;
+  numberOfResults: number = 0;
+  openOrClosed: boolean = false;
 
   constructor(private fb: FormBuilder) { 
     this.myForm = this.fb.group({
-      selectedOption: ['']
+      selectedOption: [''],
+      openOrClosed: [false]
     });
   }
 
@@ -24,6 +27,9 @@ export class HomeComponent implements OnInit {
       this.morning = value === '1';
       this.afternoon = value === '2';
       this.night = value === '3';
+    });
+    this.myForm.get('openOrClosed')?.valueChanges.subscribe(value => {
+      this.openOrClosed = value;
     });
   }
 

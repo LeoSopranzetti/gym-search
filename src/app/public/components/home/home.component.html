@@ -44,14 +44,27 @@
 
           </mat-radio-group>
 
+          <div class="checkbox">
+            <div class="input">
+              <input formControlName="openOrClosed" type="checkbox" name="" id="">
+              <p>Exibir unidades fechadas</p>
+            </div>
+            <div>
+              <p>Resultados encontrados: <span class="results">{{numberOfResults}}</span></p>
+            </div>
+
+          </div>
+
+          <div class="buttons">
+            <button class="find-button">ENCONTRAR UNIDADE</button>
+            <button class="clean-button">LIMPAR</button>
+          </div>
+
         </form>
-
-
       </section>
-
     </div>
 
-
+    <warnings-card></warnings-card>
 
 
   </div>

@@ -34,6 +34,7 @@
             box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); 
             border: 2px solid #e0e0e0 ;
             background-color: #fff;
+            margin-bottom: 40px;
 
             .header-select-time{
                 display: flex;
@@ -60,7 +61,7 @@
             }
 
             .radio-section{
-                margin-bottom: 30px;
+                margin-bottom: 5px;
                 .radio-group{
                     display: flex;
                     flex-direction: column;
@@ -79,6 +80,70 @@
                         }
                     }
 
+                }
+                .checkbox{
+                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .input{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        input{
+                            margin-right: 5px;
+                        }
+                    }
+                    .results{
+                        font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
+                    }
+                }
+                .buttons{
+                    margin-top: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    .find-button {
+                        background-color: #FFB612;
+                        width: 275px;
+                        height: 35px;
+                        border-radius: 3px;
+                        padding: 5px 10px;
+                        font-size: 14px;
+                        color: #000;
+                        text-decoration: none;
+                        display: inline-block;
+                        transition: background-color 0.3s ease;
+                        border: none;
+                        font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
+                        margin-right: 15px;
+                      }
+                    .find-button:hover {
+                    background-color: #FFD93E;
+                    }
+
+                    .clean-button {
+                        background-color: transparent;
+                        width: 275px;
+                        height: 34px;
+                        border-radius: 3px;
+                        padding: 5px 10px;
+                        font-size: 14px;
+                        color: #000;
+                        text-decoration: none;
+                        display: inline-block;
+                        transition: background-color 0.3s ease, color 0.3s ease;
+                        font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
+                        border: 1px solid var(--colorLightGrey);
+                    }
+                    .clean-button:hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                      
                 }
             }
         }

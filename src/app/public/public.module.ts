@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { WarningsCardComponent } from './components/warnings-card/warnings-card.component';
 
 
 @NgModule({
@@ -13,6 +14,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     PublicRoutingModule,
     MatCheckboxModule, FormsModule, MatRadioModule, ReactiveFormsModule
   ],
-  declarations: [HomeComponent]
+  declarations: [HomeComponent, WarningsCardComponent]
 })
 export class PublicModule { }
