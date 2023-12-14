@@ -1,0 +1,50 @@
+.gym-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    width: 314px;
+    height: 323px;
+    background-color: #f4f5f4;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 15px;
+        .header{
+            display: flex;
+            flex-direction: column;
+            .situation{
+                font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
+                margin-bottom: 15px;
+            }
+            .OPEN {
+                color: var(--colorGreen);
+            }
+          
+            .CLOSED {
+                color: var(--colorRed);
+            }
+            .title{
+                font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
+                font-size: 21px;
+                color: var(--colorDarkGrey);
+                margin-bottom: 15px;
+            }
+            .adress{
+                font-family: 'gotham-book', Roboto, "Helvetica Neue", sans-serif;
+                color: var(--colorLightGrey);
+                font-size: 14px;
+            }
+        }
+        .line{
+            width: 100%;
+            border-bottom: 2px solid #e0e0e0;
+            margin-top: 15px;
+        }
+    }
+
+}

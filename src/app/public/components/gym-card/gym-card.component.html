@@ -1,0 +1,11 @@
+<div class="gym-card">
+  <div class="container">
+    <div class="header">
+      <p class="situation" [ngClass]="{'OPEN': gym.opened , 'CLOSED': !gym.opened }">{{gym.opened === true ? 'Aberto' : 'Fechado'}}</p>
+      <p class="title">{{gym.title}}</p>
+      <div class="adress" [innerHTML]="gym.content"></div>
+    </div>
+    <div class="line"></div>
+  </div>
+
+</div>

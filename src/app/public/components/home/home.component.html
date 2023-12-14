@@ -66,6 +66,13 @@
 
     <warnings-card></warnings-card>
 
+    <div class="gyms" >
+      <div *ngFor="let item of this.allGyms">
+        <gym-card [gym]="item" ></gym-card>
+      </div>
+
+    </div>
+
 
   </div>
 </div>

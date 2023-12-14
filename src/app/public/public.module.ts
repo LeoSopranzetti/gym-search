@@ -6,6 +6,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { WarningsCardComponent } from './components/warnings-card/warnings-card.component';
+import { GymCardComponent } from './components/gym-card/gym-card.component';
 
 
 
@@ -19,6 +20,6 @@ import { WarningsCardComponent } from './components/warnings-card/warnings-card.
     ReactiveFormsModule,
     
   ],
-  declarations: [HomeComponent, WarningsCardComponent]
+  declarations: [HomeComponent, WarningsCardComponent, GymCardComponent]
 })
 export class PublicModule { }

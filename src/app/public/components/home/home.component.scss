@@ -148,9 +148,19 @@
             }
         }
 
+        .gyms{
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            margin-top: 50px;
+        }
 
-        
+        .gyms > div {
+            margin-right: 25px;
+        }
 
-
+        .gyms > div:nth-child(3n) {
+            margin-right: 0;
+        }
     }
 }
