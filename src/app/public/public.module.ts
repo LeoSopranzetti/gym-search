@@ -8,11 +8,16 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { WarningsCardComponent } from './components/warnings-card/warnings-card.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
     PublicRoutingModule,
-    MatCheckboxModule, FormsModule, MatRadioModule, ReactiveFormsModule
+    MatCheckboxModule, 
+    FormsModule, 
+    MatRadioModule, 
+    ReactiveFormsModule,
+    
   ],
   declarations: [HomeComponent, WarningsCardComponent]
 })

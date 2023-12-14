@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { PublicService } from '../../services/public.service';
+import { catchError, tap } from 'rxjs';
+import { Gym } from '../../models/gym';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +17,9 @@ export class HomeComponent implements OnInit {
   night: boolean = false;
   numberOfResults: number = 0;
   openOrClosed: boolean = false;
+  allGyms: Gym[] = [];
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private publicService: PublicService) { 
     this.myForm = this.fb.group({
       selectedOption: [''],
       openOrClosed: [false]
@@ -23,6 +27,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.manipulationOfForm();
+    this.getAllGyms();
+
+  }
+
+  private manipulationOfForm() {
     this.myForm.get('selectedOption')?.valueChanges.subscribe(value => {
       this.morning = value === '1';
       this.afternoon = value === '2';
@@ -33,7 +43,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  public change(){
+  public getAllGyms(){
+
+    this.publicService.getGyms().pipe(
+      tap((res : any ) => {
+        this.allGyms = res.locations.slice(0, 10);
+      }),
+      catchError((error)=> {
+        return error
+      })
+    ).subscribe()
 
   }
 
