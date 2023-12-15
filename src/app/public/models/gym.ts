@@ -7,8 +7,10 @@ export interface Gym {
     towel: string
     fountain: string
     locker_room: string
-    schedules: {
-        weekdays: string
-        hour: string
-    }
+    schedules: [
+        {
+            weekdays: string
+            hour: string
+        }
+    ] 
 }

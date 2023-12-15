@@ -6,6 +6,49 @@
       <div class="adress" [innerHTML]="gym.content"></div>
     </div>
     <div class="line"></div>
+    <div class="rules">
+      <div *ngIf="gym.mask === 'required'" class="restriction">
+        <img src="../../../../assets/images/required-mask.png" alt="">
+      </div>
+      <div *ngIf="gym.mask === 'recommended'" class="restriction">
+        <img src="../../../../assets/images/recommended-mask.png" alt="">
+      </div>
+      <div *ngIf="gym.towel === 'required'" class="restriction">
+        <img src="../../../../assets/images/required-towel.png" alt="">
+      </div>
+      <div *ngIf="gym.towel === 'recommended'" class="restriction">
+        <img src="../../../../assets/images/recommended-towel.png" alt="">
+      </div>
+      <div *ngIf="gym.fountain === 'partial'" class="restriction">
+        <img src="../../../../assets/images/partial-fountain.png" alt="">
+      </div>
+      <div *ngIf="gym.fountain === 'not_allowed'" class="restriction">
+        <img src="../../../../assets/images/forbidden-fountain.png" alt="">
+      </div>
+      <div *ngIf="gym.locker_room === 'partial'" class="restriction">
+        <img src="../../../../assets/images/partial-lockerroom.png" alt="">
+      </div>
+      <div *ngIf="gym.locker_room === 'closed'" class="restriction">
+        <img src="../../../../assets/images/forbidden-lockerroom.png" alt="">
+      </div>
+      <div *ngIf="gym.locker_room === 'allowed'" class="restriction">
+        <img src="../../../../assets/images/required-lockerroom.png" alt="">
+      </div>
+      <div *ngIf="gym.locker_room === 'not_allowed'" class="restriction">
+        <img src="../../../../assets/images/forbidden-lockerroom.png" alt="">
+      </div>
+    </div>
+    <div class="footer">
+      <div class="row">
+        <div class="schedules-container" *ngFor="let item of this.gym.schedules">
+          <div class="schedules">
+            <p class="title">{{item.weekdays}}</p>
+            <p class="description">{{item.hour}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </div>

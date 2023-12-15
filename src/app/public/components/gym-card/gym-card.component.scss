@@ -4,7 +4,7 @@
     width: 100%;
     border-radius: 10px;
     width: 314px;
-    height: 323px;
+    min-height: 405px;
     background-color: #f4f5f4;
     margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -44,6 +44,48 @@
             width: 100%;
             border-bottom: 2px solid #e0e0e0;
             margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .rules{
+            display: flex;
+            flex-wrap: row;
+            width: 100%;
+            .restriction{
+                width: 25%;
+                margin-bottom: 15px;
+                img{
+                    width: 70px;
+                }
+            }
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            .row{
+                display: flex;
+                flex-flow: row wrap;
+                width: 100%;
+                .schedules-container{
+                    width: 50%;
+                    margin-bottom: 25px;
+                    .schedules{
+                        display: flex;
+                        flex-direction: column;
+                        .title{
+                            font-family: 'gotham-bold', Roboto, "Helvetica Neue", sans-serif;
+                            color: var(--colorDarkGrey);
+                            margin-bottom: 8px;
+                            font-size: 20px;
+                        }
+                        .description{
+                            font-family: 'gotham-book', Roboto, "Helvetica Neue", sans-serif;
+                            color: var(--colorLightGrey);
+                        }
+                    }
+
+                }
+
+            }
         }
     }
 

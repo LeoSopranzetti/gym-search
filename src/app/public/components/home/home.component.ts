@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 
     this.publicService.getGyms().pipe(
       tap((res : any ) => {
-        this.allGyms = res.locations.slice(0, 10);
+        this.allGyms = res.locations.slice(0, 160);
       }),
       catchError((error)=> {
         return error
