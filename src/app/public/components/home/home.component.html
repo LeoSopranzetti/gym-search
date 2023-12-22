@@ -66,11 +66,16 @@
 
     <warnings-card></warnings-card>
 
+    <div class="pages-buttons" *ngIf="totalPages > 1">
+      <button class="button" [ngClass]="{'ACTIVE': page === activePage}" *ngFor="let page of totalPagesArray()" (click)="setPage(page)">
+        {{ page }}
+      </button>
+    </div>
+
     <div class="gyms" >
-      <div *ngFor="let item of this.allGyms">
+      <div *ngFor="let item of this.actualGymPage">
         <gym-card [gym]="item" ></gym-card>
       </div>
-
     </div>
 
 
