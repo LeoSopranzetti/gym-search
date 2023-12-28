@@ -84,7 +84,22 @@ export class HomeComponent implements OnInit {
   }
 
   totalPagesArray(): number[] {
-    return new Array(this.totalPages).fill(0).map((_, index) => index + 1);
+    let totalPages = new Array(this.totalPages).fill(0).map((_, index) => index + 1);
+    var slicedArray = this.sliceArray(totalPages, this.currentPage);
+    return slicedArray as number[];
+  }
+
+  sliceArray(totalPages: number[], numero: number) {
+    const index = totalPages.indexOf(numero);
+
+    if (index !== -1) {
+      const start = Math.max(0, index - 3);
+      const end = Math.min(index + 4, totalPages.length);
+
+      return totalPages.slice(start, end);
+    } else {
+      return console.log('Número não encontrado no array.');
+    }
   }
 
 }
