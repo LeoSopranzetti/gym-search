@@ -4,6 +4,11 @@ import { PublicService } from '../../services/public.service';
 import { catchError, tap } from 'rxjs';
 import { Gym } from '../../models/gym';
 
+interface Schedule {
+  weekdays: string;
+  hour: string;
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -101,5 +106,11 @@ export class HomeComponent implements OnInit {
       return console.log('Número não encontrado no array.');
     }
   }
+
+  onFilterChanged() {
+
+  }
+
+
 
 }
